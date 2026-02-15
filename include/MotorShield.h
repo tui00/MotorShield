@@ -36,13 +36,13 @@
 #include <stdint.h>
 
 /// @brief Enum for driving directions
-typedef enum
+enum class MotorDirection : uint8_t
 {
   Release = 0,
   Forward = 1,
   Backward = 2,
   Brake = 3,
-} MotorDirection;
+};
 
 /// @brief A class for controlling motors on
 class MotorShield
@@ -113,9 +113,9 @@ public:
   /// @brief Function for setting the direction of the motor
   /// @param motor The motor number (can be viewed on the shield)
   /// @param direction The direction of movement (MotorDirection)
-  void setDirection(uint8_t motor, uint8_t direction)
+  void setDirection(uint8_t motor, MotorDirection direction)
   {
-    setAB(motor, direction & 1, direction >> 1);
+    setAB(motor, (uint8_t)direction & 1, (uint8_t)direction >> 1);
   }
 
   /// @brief Function for setting the motor speed
