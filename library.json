@@ -1,0 +1,26 @@
+{
+  "name": "MotorShield",
+  "keywords": "motor, shield, Arduino, motor control, shift register, PWM",
+  "description": "A library for working with the Motor Shield on Arduino. It contains ready-made define's with pin numbering and basic functionality for controlling motors via a shift register and PWM.",
+  "authors": [
+    {
+      "name": "tui00",
+      "email": "egor5f421@mail.ru",
+      "url": "https://github.com/tui00"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tui00/MotorShield.git"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "frameworks": ["arduino"],
+  "platforms": "*",
+  "export": {
+    "include": [
+      "include/MotorShield.h"
+    ]
+  },
+  "dependencies": []
+}
